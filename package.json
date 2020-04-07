@@ -26,6 +26,10 @@
     "postinstall": "webpack",
     "webpack": "webpack --mode=development --watch"
   },
+  "engines": {
+    "node": "12.5.0",
+    "npm": "6.9.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danjlee/Davant.git"
