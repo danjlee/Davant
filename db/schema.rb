@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_07_131716) do
+ActiveRecord::Schema.define(version: 2020_04_07_134213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "rest_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rest_id"], name: "index_favorites_on_rest_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "rest_id", null: false
+    t.string "time", null: false
+    t.string "date", null: false
+    t.integer "party_size", null: false
+    t.string "occasion", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rest_id"], name: "index_reservations_on_rest_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name", null: false
@@ -30,6 +52,20 @@ ActiveRecord::Schema.define(version: 2020_04_07_131716) do
     t.datetime "updated_at", null: false
     t.index ["location"], name: "index_restaurants_on_location"
     t.index ["name"], name: "index_restaurants_on_name"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rest_id", null: false
+    t.integer "author_id", null: false
+    t.integer "overall", null: false
+    t.integer "food", null: false
+    t.integer "ambience", null: false
+    t.integer "service", null: false
+    t.text "comment", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_reviews_on_author_id"
+    t.index ["rest_id"], name: "index_reviews_on_rest_id"
   end
 
   create_table "users", force: :cascade do |t|
