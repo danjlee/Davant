@@ -23,21 +23,20 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
 
     has_many :reservations,
-    foreign_key: user_id,
+    foreign_key: :user_id,
     class_name: :Reservation
 
     has_many :reviews,
-    foreign_key: author_id,
+    foreign_key: :author_id,
     class_name: :Review
 
     has_many :favorites,
-    foreign_key: user_id,
+    foreign_key: :user_id,
     class_name: :Favorite
     
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
-        return nil unless user && user.is_passowrd?(password)
-        user
+        user && user.is_password?(password) ? user : nil
     end
 
     def self.generate_session_token
@@ -50,17 +49,16 @@ class User < ApplicationRecord
     end
 
     def is_password?(password)
-        bcrypted = Bcrypt::Password.new(self.password_digest)
+        bcrypted = BCrypt::Password.new(self.password_digest)
         bcrypted.is_password?(password)
     end
 
     def ensure_session_token
-        self.session_token ||= User.generate_session_token
+        self.session_token ||= self.class.generate_session_token
     end
 
     def reset_session_token!
-        self.session_token = User.generate_session_token
-        self.save
+        self.update!(session_token: self.class.generate_session_token)
         self.session_token
     end
 end
