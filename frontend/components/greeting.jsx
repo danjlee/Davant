@@ -10,7 +10,7 @@ class Greeting extends React.Component {
         const links = () => (
             <span className="nav-right">
                 <button id="sign-up" onClick={() => this.props.openModal('signup')}>Sign up</button>
-                <button id="sign-up" onClick={()=> this.props.openModal('signin')}>Sign in</button>
+                <button id="sign-in" onClick={()=> this.props.openModal('signin')}>Sign in</button>
             </span>
         );
 
@@ -18,6 +18,10 @@ class Greeting extends React.Component {
             <span className="nav-right">
                 <div className="container">
                     <h2 id="greeting">Hi, {this.props.currentUser.fname}</h2>
+
+                    <div className="container">
+                        <button id="sign-out" onClick={this.props.logout}>Sign out</button>
+                    </div>
                 </div>
             </span>
         );
