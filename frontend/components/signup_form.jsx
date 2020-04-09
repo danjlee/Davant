@@ -60,6 +60,7 @@ class SignUpForm extends React.Component {
 
                         <input className="submit-button" type="submit" value={this.props.formType} />
                     </div>
+                    <hr className="session-hr" />
                 </form>
             </div>
             </>

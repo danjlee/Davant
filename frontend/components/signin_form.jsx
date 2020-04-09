@@ -52,6 +52,7 @@ class SignInForm extends React.Component {
                             <input id="submit-button" className="submit-button" type="submit" value={this.props.formType}/>
                         
                         </div>
+                        <hr className="session-hr" />
                     </form>
                 </div>
             </>
