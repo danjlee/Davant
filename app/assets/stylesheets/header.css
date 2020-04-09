@@ -23,9 +23,9 @@ header {
 
 button#sign-up {
     cursor: pointer;
-    font-size: .875rem;
+    font-size: .9rem;
     line-height: 2rem;
-    font-weight: 500;
+    font-weight: 400;
     font-family:  Helvetica Neue;
     border-radius: .2rem;
     border-color: #1c627a;
@@ -41,11 +41,12 @@ button#sign-up:hover {
 
 button#sign-in {
     cursor: pointer;
-    font-size: .875rem;
+    font-size: .9rem;
     line-height: 2rem;
     font-family: Helvetica Neue;
     background-color: white;
     border-color: white;
+    border-radius: .2rem;
     padding: 0 1rem;
     margin: .6875rem 0 0;
     font-weight: 100;
