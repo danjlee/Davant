@@ -8,6 +8,7 @@ class SignInForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoSubmit = this.handleSubmit.bind(this);
     }
 
     update(field) {
@@ -24,6 +25,12 @@ class SignInForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user).then(this.props.closeModal);
+    }
+
+    demoSubmit(e) {
+        e.preventDefault();
+        this.props.login({ email: 'guest@davant.com', password: 'guestlogin' })
+            .then(this.props.closeModal);
     }
 
     renderErrors() {
@@ -53,6 +60,12 @@ class SignInForm extends React.Component {
                         
                         </div>
                         <hr className="session-hr" />
+                        <div className="to-sign-up">
+                            <p>New to D'avant?
+                                &nbsp;
+                                <button type="button" onClick={this.props.openModal}>Create an account</button>
+                            </p>
+                        </div>
                     </form>
                 </div>
             </>

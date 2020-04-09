@@ -2,7 +2,7 @@ form h3 {
     position: relative;
     font-weight: lighter;
     margin: 0 0 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.2;
     font-family: Helvetica
 }
@@ -27,7 +27,7 @@ form h3 {
     cursor: pointer;
     background-color: #da3743;
     color: white;
-    
+    font-weight: bold;
 }
 
 .session-hr {

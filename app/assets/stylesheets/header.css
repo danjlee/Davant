@@ -27,7 +27,7 @@ button#sign-up {
     line-height: 2rem;
     font-weight: 500;
     font-family:  Helvetica Neue;
-    border-radius: .1875rem;
+    border-radius: .2rem;
     border-color: #1c627a;
     background-color: #237b98;
     color: white;
@@ -43,7 +43,7 @@ button#sign-in {
     cursor: pointer;
     font-size: .875rem;
     line-height: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica Neue;
     background-color: white;
     border-color: white;
     padding: 0 1rem;

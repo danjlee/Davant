@@ -12,7 +12,7 @@ class SignUpForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-
+        this.demoSubmit = this.demoSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -29,6 +29,12 @@ class SignUpForm extends React.Component {
         e.preventDefault();
             this.props.processForm(this.state)
                 .then(this.props.closeModal);
+    }
+
+    demoSubmit(e) {
+        e.preventDefault();
+        this.props.login({ email: 'guest@davant.com', password: 'guestlogin' })
+            .then(this.props.closeModal);
     }
 
     renderErrors() {
@@ -48,7 +54,7 @@ class SignUpForm extends React.Component {
             <>
             <div className="signup-form-container">
                 <form onSubmit={this.handleSubmit} className="session-form-box">
-                    <h3>Welcome to D'avant</h3>
+                    <h3>Welcome to D'avant!</h3>
                     <hr className="session-hr"/>
                     {this.renderErrors()}
                     <div className="session-form">
@@ -59,8 +65,13 @@ class SignUpForm extends React.Component {
                         <input type="text" value={this.state.location} onChange={this.update('location')} placeholder='Primary Dining Location *' />
 
                         <input className="submit-button" type="submit" value={this.props.formType} />
+                        
                     </div>
-                    <hr className="session-hr" />
+                        <hr className="session-hr" />
+                        <div className="demo-form">
+                            <h5>Don't want to complete the form?</h5>
+                            <button className="demo-button" onClick={this.demoSubmit}>Login as Guest</button>
+                        </div>
                 </form>
             </div>
             </>

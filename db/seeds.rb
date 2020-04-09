@@ -8,3 +8,10 @@
 
 User.destroy_all
 
+User.create!({
+    fname: 'Guest',
+    lname: 'Davant',
+    email: 'guest@davant.com',
+    password: 'guestlogin',
+    location: 'New York'
+})
