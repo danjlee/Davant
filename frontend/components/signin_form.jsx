@@ -43,7 +43,7 @@ class SignInForm extends React.Component {
             <>
                 <div className="signin-form-container">
                     <form onSubmit={this.handleSubmit} className="session-form-box">
-                        <h3>Please Sign In</h3>
+                        <h3>Please sign in</h3>
                         <hr className="session-hr"/>
                         {this.renderErrors()}
                         <div className="session-form">

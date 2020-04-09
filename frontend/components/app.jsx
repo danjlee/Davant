@@ -6,7 +6,6 @@ const App = () => (
     <div className="main-body">
         <Modal />
         <header>
-            <h1>D'avant</h1>
             <GreetingContainer />
         </header>
         <div className="main-div">

@@ -30,7 +30,9 @@ class Greeting extends React.Component {
             <div className="navbar">
                 <span className="nav-left">
                     <Link to="/" className="home-link">
-                        <span id="logo"></span>
+                        <span id="logo">
+                            <img src={window.logo} />
+                        </span>
                     </Link>
                 </span>
                 {this.props.currentUser ? greet() : links()}
