@@ -69,8 +69,9 @@ class SignUpForm extends React.Component {
                     </div>
                         <hr className="session-hr" />
                         <div className="demo-form">
-                            <h5>Don't want to complete the form?</h5>
-                            <button className="demo-button" onClick={this.demoSubmit}>Login as Guest</button>
+                            <p>Don't want to complete the form?
+                                <button className="demo-button" onClick={this.demoSubmit}>Login as Guest</button>
+                            </p>
                         </div>
                 </form>
             </div>

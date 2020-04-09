@@ -62,7 +62,6 @@ class SignInForm extends React.Component {
                         <hr className="session-hr" />
                         <div className="to-sign-up">
                             <p>New to D'avant?
-                                &nbsp;
                                 <button type="button" onClick={this.props.openModal}>Create an account</button>
                             </p>
                         </div>

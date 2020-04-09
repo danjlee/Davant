@@ -21,7 +21,8 @@ form h3 {
     font-size: .9rem;
     margin-bottom: .5rem;
     padding: 1rem 0rem 1rem 1rem;
-    border-radius: .3rem;
+    border-radius: .2rem;
+    border: 1px solid rgb(235, 234, 234);
 }
 
 .session-form .submit-button {
@@ -29,9 +30,35 @@ form h3 {
     background-color: #da3743;
     color: white;
     font-weight: bold;
-    border-radius: .3rem;
+    border-radius: .2rem;
 }
 
 .session-hr {
-    opacity: .4;
+    opacity: .25;
+}
+
+.demo-form .demo-button {
+    cursor: pointer;
+    border: none;
+    color: #da3743;
+    font-weight: bold;
+    font-family: Helvetica;
+    font-size: .9rem;
+}
+
+.demo-form p {
+    font-family: Helvetica;
+}
+
+.to-sign-up button {
+    cursor: pointer;
+    border: none;
+    color: #da3743;
+    font-weight: bold;
+    font-family: Helvetica;
+    font-size: .9rem;
+}
+
+.to-sign-up p {
+    font-family: Helvetica;
 }
