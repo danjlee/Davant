@@ -1,0 +1,23 @@
+form h3 {
+    position: relative;
+    font-weight: lighter;
+    margin: 0 0 1rem;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-family: Helvetica
+}
+
+.session-form-box {
+    padding: 3rem;
+}
+
+.session-form-box > * {
+    display: flex;
+    flex-direction: column;
+}
+
+.session-form input {
+    display: block;
+    font-size: .7rem;
+
+}

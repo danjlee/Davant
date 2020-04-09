@@ -4,6 +4,27 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5)
+    background: rgba(0, 0, 0, 0.2);
     z-index: 10;
+}
+
+.modal-child {
+    position: relative;
+    top: 55%;
+    left: 50%;
+    width: 500px;
+    height: 50rem;
+    transform: translate(-50%, -50%);
+}
+
+.modal-child > * {
+    background-color: white;
+    height: fit-content;
+}
+
+.modal-close {
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    font-size: 2rem;
 }

@@ -50,11 +50,11 @@ button#sign-in {
     margin: .6875rem 0 0;
     font-weight: 100;
     margin-left: 10px;
+    opacity: .6;
 }
 
 button#sign-in:hover {
-
-    font-size: .9rem;
+    opacity: 1;
 }
 
 .nav-left {
