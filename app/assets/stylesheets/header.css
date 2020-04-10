@@ -28,12 +28,11 @@ button#sign-up {
     font-weight: 400;
     font-family:  sans-serif;
     border-radius: .2rem;
+    border: none;
     background-color: #237b98;
-    border-color: #237b98;
     color: white;
     padding: 0 1rem;
     margin: .6875rem 0 0;
-    box-shadow: none;
 }
 
 button#sign-up:hover {
@@ -46,14 +45,13 @@ button#sign-in {
     line-height: 2rem;
     font-family: sans-serif;
     background-color: white;
-    border-color: white;
+    border: none;
     border-radius: .2rem;
     padding: 0 1rem;
     margin: .6875rem 0 0;
     font-weight: 100;
     margin-left: 10px;
     opacity: .6;
-    box-shadow: none;
 }
 
 button#sign-in:hover {
