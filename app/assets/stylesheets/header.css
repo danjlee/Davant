@@ -128,7 +128,7 @@ span#down-arrow:hover {
     background-color: white;
     top: 100%;
     right: -130px;
-    width: 230px;
+    width: 150px;
     z-index: 10;
     border: 1px solid rgb(235, 234, 234);
 }
@@ -169,10 +169,10 @@ ul {
 
 .dropdown::before {
     border-width: 1px;
-    margin-left: 60px;
+    margin-left: 55px;
 }
 
 .dropdown::after {
     border-width: 1px;
-    margin-left: 60px;
+    margin-left: 55px;
 }
