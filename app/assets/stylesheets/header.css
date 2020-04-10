@@ -58,6 +58,14 @@ button#sign-in:hover {
     opacity: 1;
 }
 
+button#sign-in:focus {
+    outline: none;
+}
+
+button#sign-up:focus {
+    outline: none;
+}
+
 .nav-left {
     position: relative;
     display: flex;

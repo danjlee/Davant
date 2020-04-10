@@ -58,6 +58,10 @@ form h3 {
     font-size: .9rem;
 }
 
+.demo-button {
+    outline: none;
+}
+
 .demo-form p {
     font-family: sans-serif;
 }
@@ -69,6 +73,7 @@ form h3 {
     font-weight: bold;
     font-family: sans-serif;
     font-size: .9rem;
+    outline: none;
 }
 
 .to-sign-up p {
