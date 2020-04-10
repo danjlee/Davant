@@ -42,7 +42,7 @@ class Greeting extends React.Component {
             <span className="nav-right">
                 <div className="container">
                     <span className="user-toggle" onClick={this.showDropMenu}>
-                        <h2 id="greeting">Hi, {this.props.currentUser.fname}</h2>
+                        <h2 id="greeting">Hello, {this.props.currentUser.fname}</h2>
                         <span id="down-arrow">
                             <img src={window.downarrow} />
                         </span>

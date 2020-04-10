@@ -73,7 +73,39 @@ span#logo img {
 
 .container {
     position: relative;
-    display: inline-block;
+    display: inline;
+}
+
+h2#greeting {
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: 300;
+    border-left: 1px solid rgb(235, 234, 234);
+    padding-left: 15px;
+    margin-top: 12px;
+    opacity: .6;
+}
+
+h2#greeting:hover {
+    opacity: 1;
+}
+
+span#down-arrow {
+    display: flex;
+    align-items: center;
+    opacity: .6;
+}
+
+span#down-arrow img {
+    display: flex;
+    width: .6rem;
+    height: auto;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+span#down-arrow:hover {
+    opacity: 1;
 }
 
 .user-toggle {
@@ -103,10 +135,34 @@ ul {
     display: block;
     padding: .8rem;
     opacity: .6;
+    font-family: sans-serif;
+    font-weight: 300;
 }
 
 .dropdown li:hover {
     background-color: rgba(0, 0, 0, 0.01);
     opacity: 1;
     cursor: pointer;
+}
+
+.dropdown:after, .dropdown:before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    content: " ";
+    width: 0;
+    height: 0;
+    border: solid transparent;
+}
+
+.dropdown:before {
+    border-color: rgb(210, 215, 218);
+    border-width: 10px;
+    margin-left: 60px;
+}
+
+.dropdown:after {
+    border-color: rgb(255, 255, 255);
+    border-width: 10px;
+    margin-left: 60px;
 }

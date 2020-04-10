@@ -26,6 +26,11 @@ form h3 {
     font-family: sans-serif;
 }
 
+.session-form input:focus {
+    outline: none;
+    border: 1px solid gray;
+}
+
 .session-form .submit-button {
     cursor: pointer;
     background-color: #da3743;
@@ -34,6 +39,10 @@ form h3 {
     border-radius: .2rem;
     font-size: 1rem;
     font-family: sans-serif;
+}
+
+.submit-button:hover {
+    filter: brightness(90%);
 }
 
 .session-hr {
