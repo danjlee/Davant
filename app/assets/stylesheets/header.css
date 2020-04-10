@@ -26,7 +26,7 @@ button#sign-up {
     font-size: .9rem;
     line-height: 2rem;
     font-weight: 400;
-    font-family:  Helvetica Neue;
+    font-family:  sans-serif;
     border-radius: .2rem;
     border-color: #1c627a;
     background-color: #237b98;
@@ -43,7 +43,7 @@ button#sign-in {
     cursor: pointer;
     font-size: .9rem;
     line-height: 2rem;
-    font-family: Helvetica Neue;
+    font-family: sans-serif;
     background-color: white;
     border-color: white;
     border-radius: .2rem;
@@ -69,4 +69,44 @@ span#logo img {
     height: auto;
     border-right: 1px solid rgb(235, 234, 234);
     padding-right: 1rem;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.user-toggle {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    right: -130px;
+    width: 230px;
+    z-index: 10;
+    border: 1px solid rgb(235, 234, 234);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dropdown li {
+    display: block;
+    padding: .8rem;
+    opacity: .6;
+}
+
+.dropdown li:hover {
+    background-color: rgba(0, 0, 0, 0.01);
+    opacity: 1;
+    cursor: pointer;
 }
