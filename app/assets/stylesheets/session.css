@@ -53,6 +53,7 @@ form h3 {
     cursor: pointer;
     border: none;
     color: #da3743;
+    background-color: white;
     font-weight: bold;
     font-family: sans-serif;
     font-size: .9rem;
@@ -70,6 +71,7 @@ form h3 {
     cursor: pointer;
     border: none;
     color: #da3743;
+    background-color: white;
     font-weight: bold;
     font-family: sans-serif;
     font-size: .9rem;
