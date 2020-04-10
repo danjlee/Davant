@@ -153,24 +153,26 @@ ul {
     cursor: pointer;
 }
 
-.dropdown:after, .dropdown:before {
+.dropdown::after, .dropdown::before {
     position: absolute;
     bottom: 100%;
     left: 50%;
     content: " ";
-    width: 0;
-    height: 0;
-    border: solid transparent;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid rgb(235, 234, 234);
+    border-left: 1px solid rgb(235, 234, 234);
+    background-color: white;
+    transform: rotate(45deg);
+    margin-bottom: -5px;
 }
 
-.dropdown:before {
-    border-color: rgb(210, 215, 218);
-    border-width: 10px;
+.dropdown::before {
+    border-width: 1px;
     margin-left: 60px;
 }
 
-.dropdown:after {
-    border-color: rgb(255, 255, 255);
-    border-width: 10px;
+.dropdown::after {
+    border-width: 1px;
     margin-left: 60px;
 }
