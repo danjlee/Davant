@@ -73,7 +73,7 @@ button#sign-up:focus {
 }
 span#logo img {
     display: block;
-    width: 70%;
+    width: 65%;
     height: auto;
     border-right: 1px solid rgb(235, 234, 234);
     padding-right: 1rem;
