@@ -28,4 +28,10 @@ class Restaurant < ApplicationRecord
     has_many :favorites,
     foreign_key: :rest_id,
     class_name: :Favorite
+
+    def self.find_restaurant(keyword)
+        Restaurant.where("lower(name) like ?", "%#{keyword.downcase}%")
+            .or(Restaurant.where("lower(location) like ?", "%#{keyword.downcase}%"))
+                .or(Restaurant.where("lower(cuisine) like ?", "%#{keyword.downcase}%"))
+    end
 end
