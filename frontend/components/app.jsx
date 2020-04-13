@@ -10,6 +10,9 @@ const App = () => (
         </header>
         <div className="main-div">
         </div>
+        <footer>
+            <h5>Hello</h5>
+        </footer>
     </div>
 );
 
