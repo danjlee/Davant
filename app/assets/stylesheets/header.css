@@ -1,5 +1,16 @@
-header {
+html {
+    background-color: whitesmoke;
+}
+
+.main-body {
+    background-color: white;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main-body header {
     position: relative;
+    margin-top: 28px;
 }
 
 .navbar {
