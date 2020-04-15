@@ -1,5 +1,4 @@
 import * as RestaurantApiUtil from '../util/restaurant_api_util'
-import { LoaderOptionsPlugin } from 'webpack';
 
 export const RECEIVE_ALL_RESTAURANTS = 'RECEIVE_ALL_RESTAURANTS';
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
