@@ -1,0 +1,88 @@
+.featured-head {
+    width: 56rem;
+    padding-bottom: 25px;
+    border-bottom: 1px solid lightgrey;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+.featured-int-head {
+    width: 56rem;
+    padding-bottom: 25px;
+    border-bottom: 1px solid lightgrey;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+.featured-areas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 66rem;
+    height: 22rem;
+    position: relative;
+    justify-self: center;
+}
+
+.featured-nyc, .featured-la, .featured-chicago, .featured-sf, .featured-miami, .featured-vegas {
+    z-index: 1;
+}
+
+.featured-areas div {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    height: 11rem;
+    
+}
+
+.featured-areas img {
+    position: absolute;
+    filter: brightness(70%);
+    opacity: .7;
+    width: 100%;
+    z-index: -1;
+}
+
+.featured-int-areas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 66rem;
+    height: 22rem;
+    position: relative;
+    justify-self: center;
+}
+
+.featured-int-areas div {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    height: 11rem;
+}
+
+.featured-int-areas img {
+    position: absolute;
+    width: 100%;
+    filter: brightness(70%);
+    opacity: .7;
+    z-index: -1;
+}
+
+.featured-london, .featured-tokyo, .featured-sydney, .featured-berlin, .featured-mexico, .featured-dublin {
+    z-index: 1;
+}

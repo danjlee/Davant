@@ -28,27 +28,53 @@ class Home extends React.Component {
             <>
                 <div className='home'>
                     <h1>Find your table for any occasion</h1>
-                    <div className='home-image'></div>
+                    <div className='home-image'>
+                        <img src={window.home} />
+                    </div>
                 </div>
 
                 <h3 className="featured-head">Featured Areas</h3>
                 <div className="featured-areas">
-                    <div className="featured-nyc">New York Area</div>
-                    <div className="featured-la">Los Angeles</div>
-                    <div className="featured-chicago">Chicago</div>
-                    <div className="featured-sf">San Francisco</div>
-                    <div className="featured-miami">Miami</div>
-                    <div className="featured-vegas">Las Vegas</div>
+                    <div className="featured-nyc">New York Area
+                        <img src={window.nyc}/>
+                    </div>
+                    <div className="featured-la">Los Angeles
+                        <img src={window.la} />
+                    </div>
+                    <div className="featured-chicago">Chicago
+                        <img src={window.chicago} />
+                    </div>
+                    <div className="featured-sf">San Francisco
+                        <img src={window.sf} />
+                    </div>
+                    <div className="featured-miami">Miami
+                        <img src={window.miami} />
+                    </div>
+                    <div className="featured-vegas">Las Vegas
+                        <img src={window.vegas} />
+                    </div>
                 </div>
 
                 <h3 className="featured-int-head">Featured International Areas</h3>
-                <div className="featured-int">
-                    <div className="featured-london">London, UK</div>
-                    <div className="featured-tokyo">Tokyo, JP</div>
-                    <div className="featured-sydney">Sydney / NSW, AU</div>
-                    <div className="featured-berlin">Berlin, DE</div>
-                    <div className="featured-mexico">Mexico City, MX</div>
-                    <div className="featured-deublin">Dublin, IE</div>
+                <div className="featured-int-areas">
+                    <div className="featured-london">London, UK
+                        <img src={window.london} />
+                    </div>
+                    <div className="featured-tokyo">Tokyo, JP
+                        <img src={window.tokyo} />
+                    </div>
+                    <div className="featured-sydney">Sydney / NSW, AU
+                        <img src={window.sydney} />
+                    </div>
+                    <div className="featured-berlin">Berlin, DE
+                        <img src={window.berlin} />
+                    </div>
+                    <div className="featured-mexico">Mexico City, MX
+                        <img src={window.mexico} />
+                    </div>
+                    <div className="featured-dublin">Dublin, IE
+                        <img src={window.dublin} />
+                    </div>
                 </div>
 
             </>

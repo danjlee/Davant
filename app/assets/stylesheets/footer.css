@@ -1,0 +1,10 @@
+footer {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 0;
+    height: 500px;
+    width: auto;
+    background-color: #2d333f;
+    
+}
