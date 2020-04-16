@@ -140,6 +140,7 @@ span#down-arrow:hover {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    top: 15%;
 }
 
 .dropdown {
@@ -148,7 +149,7 @@ span#down-arrow:hover {
     top: 100%;
     right: -130px;
     width: 150px;
-    z-index: 10;
+    z-index: 1;
     border: 1px solid rgb(235, 234, 234);
 }
 
