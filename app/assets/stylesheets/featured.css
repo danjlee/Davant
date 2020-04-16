@@ -46,7 +46,7 @@
 .featured-areas img {
     position: absolute;
     filter: brightness(70%);
-    opacity: .7;
+    opacity: .9;
     width: 100%;
     z-index: -1;
 }
@@ -76,7 +76,7 @@
     position: absolute;
     width: 100%;
     filter: brightness(70%);
-    opacity: .7;
+    opacity: .9;
     z-index: -1;
     
 }
