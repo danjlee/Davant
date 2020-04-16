@@ -16,7 +16,7 @@ const App = () => (
             </Switch>
         </div>
         <footer>
-            <h5>Hello, my name is Foot.</h5>
+            <h5>Hello, my name is Foot the Footer.</h5>
         </footer>
     </div>
 );
