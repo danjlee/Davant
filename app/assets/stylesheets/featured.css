@@ -1,5 +1,5 @@
 .featured-head {
-    width: 66rem;
+    width: 67rem;
     padding-bottom: 25px;
     border-bottom: 1px solid lightgrey;
     font-size: 23px;
@@ -7,7 +7,8 @@
 }
 
 .featured-int-head {
-    width: 66rem;
+    width: 67rem;
+    padding-top: 25px;
     padding-bottom: 25px;
     border-bottom: 1px solid lightgrey;
     font-size: 23px;
@@ -16,15 +17,14 @@
 
 .featured-areas {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    width: 66rem;
+    width: 69rem;
     height: 22rem;
-    position: relative;
-    justify-self: center;
 }
 
 .featured-nyc, .featured-la, .featured-chicago, .featured-sf, .featured-miami, .featured-vegas {
+    left: 1.2%;
+    border-right: 11px solid white;
     z-index: 1;
 }
 
@@ -53,12 +53,9 @@
 
 .featured-int-areas {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    width: 66rem;
+    width: 69rem;
     height: 22rem;
-    position: relative;
-    justify-self: center;
 }
 
 .featured-int-areas div {
@@ -81,19 +78,26 @@
     filter: brightness(70%);
     opacity: .7;
     z-index: -1;
+    
 }
 
 .featured-london, .featured-tokyo, .featured-sydney, .featured-berlin, .featured-mexico, .featured-dublin {
+    left: 1.2%;
+    border-right: 11px solid white;
     z-index: 1;
 }
 
 .featured-int-areas img:hover {
+    width: 97%;
+    height: auto;
     filter: brightness(100%);
     opacity: 1;
     cursor: pointer;
 }
 
 .featured-areas img:hover {
+    width: 97%;
+    height: auto;
     filter: brightness(100%);
     opacity: 1;
     cursor: pointer;
