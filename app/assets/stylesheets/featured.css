@@ -86,3 +86,18 @@
 .featured-london, .featured-tokyo, .featured-sydney, .featured-berlin, .featured-mexico, .featured-dublin {
     z-index: 1;
 }
+
+.featured-int-areas img:hover {
+    filter: brightness(100%);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.featured-areas img:hover {
+    filter: brightness(100%);
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
