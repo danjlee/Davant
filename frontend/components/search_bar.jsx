@@ -45,22 +45,7 @@ class Search extends React.Component {
                     <button type="submit " className="search-submit">Let's go</button>
                 </form>
             );
-        } else {
-            return (
-                <div className="index-search-bar">
-                    <form className="index-search-container" onSubmit={this.handleSubmit} method="GET">
-
-                        <span className="search-span">
-                            <div className="search-image">
-                                <img src={window.search} />
-                            </div>
-                            <input type="text" value={this.state.keyword} onChange={this.update('keyword')} placeholder="Location, Restaurant, or Cuisine" />
-                        </span>
-                        <button type="submit" className="search-submit" >Find a Table</button>
-                    </form>
-                </div>
-            );
-        }
+        } 
 
     }
 }
