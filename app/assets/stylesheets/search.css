@@ -1,0 +1,45 @@
+.search-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    height: 2.5rem;
+    width: 90%;
+    min-height: fit-content;
+    max-width: 85%;
+    justify-content: center;
+}
+
+.search-container > * {
+    background: white;
+    border-radius: 5px;
+    min-height: 2.5rem;
+    margin: 1rem 13px;
+}
+
+.search-span {
+    display: flex;
+    flex-direction: row;
+    width: 7rem;
+}
+
+.search-image img {
+    width: 1rem;
+    height: auto;
+    padding-top: 10px;
+}
+
+.search-submit {
+    width: 6rem;
+    background-color: #da3743;
+    border: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.search-submit:hover {
+    filter: brightness(90%);
+}
+

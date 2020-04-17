@@ -28,7 +28,7 @@ export const fetchAllRestaurants = () => dispatch => {
 export const fetchRestaurant = id => dispatch => {
     dispatch(displayRestaurants());
 
-    return RestaurantApiUtil.fetchAllRestaurants()
+    return RestaurantApiUtil.fetchRestaurant(id)
         .then(restaurant => dispatch(receiveRestaurant(restaurant)))
 };
 

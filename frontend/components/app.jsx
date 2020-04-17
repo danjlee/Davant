@@ -16,7 +16,12 @@ const App = () => (
             </Switch>
         </div>
         <footer>
-            <h5>Hello, my name is Foot the Footer.</h5>
+            <h5>JOIN US ON</h5>
+            <div className="footer-links">
+                <a href="https://github.com/danjlee" id="github" >
+                    <img src={window.github} />
+                </a>
+            </div>
         </footer>
     </div>
 );

@@ -11,5 +11,24 @@ footer {
 
 footer h5 {
     color: white;
-    padding-right: 50px;
+    padding-right: 20px;
+    font-family: sans-serif;
+    
+}
+
+.footer-links {
+    display: flex;
+    position: relative;
+    height: 40px;
+    padding: 5px 10vw 0 0;
+}
+
+#github img {
+    width: 30px;
+    height: auto;
+    padding-top: 6px;
+}
+
+#github img:hover {
+    transform: scale(1.1);
 }
