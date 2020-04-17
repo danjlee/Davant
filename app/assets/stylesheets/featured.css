@@ -50,6 +50,7 @@
     opacity: .9;
     width: 100%;
     z-index: -1;
+    border-radius: 5px;
 }
 
 .featured-int-areas {
@@ -79,6 +80,7 @@
     filter: brightness(70%);
     opacity: .9;
     z-index: -1;
+    border-radius: 5px;
     
 }
 
@@ -89,6 +91,7 @@
 }
 
 .featured-int-areas img:hover {
+    border-radius: 5px;
     width: 97%;
     height: auto;
     filter: brightness(100%);
