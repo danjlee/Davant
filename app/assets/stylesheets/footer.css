@@ -13,6 +13,7 @@ footer h5 {
     color: white;
     padding-right: 20px;
     font-family: sans-serif;
+    font-size: 12px;
     
 }
 
@@ -24,9 +25,9 @@ footer h5 {
 }
 
 #github img {
-    width: 30px;
+    width: 25px;
     height: auto;
-    padding-top: 6px;
+    padding-top: 8px;
 }
 
 #github img:hover {

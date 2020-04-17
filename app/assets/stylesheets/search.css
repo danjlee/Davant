@@ -20,7 +20,7 @@
 .search-span {
     display: flex;
     flex-direction: row;
-    width: 7rem;
+    width: 10rem;
 }
 
 .search-image img {
