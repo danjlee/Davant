@@ -81,3 +81,12 @@ form h3 {
 .to-sign-up p {
     font-family: sans-serif;
 }
+
+.session-error {
+    background-color: #fdf0ef;
+    color: #c44841;
+    font-family: sans-serif;
+    font-size: 13px;
+    border-radius: 2px;
+    text-align: left;
+}
