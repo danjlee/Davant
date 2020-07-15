@@ -1,4 +1,4 @@
-import { DISPLAY_RESTAURANTS, RECEIVE_RESTAURANT } from '../actions/restaurant_actions';
+import { DISPLAY_RESTAURANTS } from '../actions/restaurant_actions';
 import { RECEIVE_ALL_RESTAURANTS, RECEIVE_RESTAURANT } from '../actions/restaurant_actions';
 
 const DisplayReducer = ( state = false, action) => {

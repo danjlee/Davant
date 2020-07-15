@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Restaurant.destroy_all
 
 User.create!({
     fname: 'Guest',
@@ -14,4 +15,17 @@ User.create!({
     email: 'guest@davant.com',
     password: 'guestlogin',
     location: 'New York'
+})
+
+Restaurant.create!({
+    name: 'bla',
+    address: 'blablabla',
+    location: 'New York',
+    phone_number: '201-000-0000',
+    cuisine: 'Italian',
+    menu: 'www.google.com',
+    hours: 'Lunch Dinner',
+    dress_code: 'Casual',
+    exec_chef: 'Jen Doe',
+    description: 'best place'
 })

@@ -3,6 +3,8 @@ import Modal from './modal';
 import GreetingContainer from './greeting_container';
 import Home from './home';
 import { Route, Switch } from 'react-router-dom';
+import RestaurantIndexContainer from './restaurant_index_container';
+import RestaurantContainer from './restaurant_container';
 
 const App = () => (
     <div className="main-body">
@@ -13,6 +15,8 @@ const App = () => (
         <div className="main-div">
             <Switch>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/restaurants" component={RestaurantIndexContainer} />
+                <Route exact path="/restaurant/:restId" component={RestaurantContainer} />
             </Switch>
         </div>
         <footer>

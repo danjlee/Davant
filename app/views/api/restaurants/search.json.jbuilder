@@ -1,0 +1,1 @@
+json.result @restaurants.collect { |restaurant| restaurant.name }
