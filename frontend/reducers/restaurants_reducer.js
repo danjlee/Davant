@@ -8,8 +8,8 @@ const RestaurantsReducer = (state = {}, action) => {
         return Object.assign({}, action.restaurants);
       case RECEIVE_RESTAURANT:
         return action.payload.restaurant;
-      case RECEIVE_CURRENT_USER:
-        return Object.assign({}, action.payload.restaurants);
+      // case RECEIVE_CURRENT_USER:
+      //   return Object.assign({}, action.payload.restaurants);
       default:
         return state;
     }

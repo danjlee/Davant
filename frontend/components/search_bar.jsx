@@ -56,7 +56,7 @@ class Search extends React.Component {
                     </div>
                     <input type="text" onChange={this.update("keyword")} value={this.state.keyword} placeholder="Location, Restaurant, or Cuisine" />
                   </span>
-                  <button type="submit " className="search-submit"> Find a Table </button>
+                  <button type="submit " className="search-submit">Find a Table</button>
                 </form>
               </div>
             );
