@@ -11,7 +11,7 @@ export const receiveAllRestaurants = restaurants => ({
 
 export const receiveRestaurant = payload => ({
     type: RECEIVE_RESTAURANT,
-    payload
+    restaurant
 });
 
 export const displayRestaurants = () => ({

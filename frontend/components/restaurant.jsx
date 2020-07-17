@@ -4,9 +4,11 @@ import { withRouter } from 'react-router-dom';
 class Restaurant extends React.Component {
     constructor(props) {
         super(props);
+
     }
 
     componentDidMount() {
+      debugger;
       this.props.fetchRestaurant(this.props.match.params.restId);
     }
 
