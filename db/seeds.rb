@@ -18,8 +18,8 @@ User.create!({
 })
 
 Restaurant.create!({
-    name: 'bla',
-    address: 'blablabla',
+    name: 'Appleseed',
+    address: '123 johnny street',
     location: 'New York',
     phone_number: '201-000-0000',
     cuisine: 'Italian',

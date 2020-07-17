@@ -19,7 +19,7 @@ class RestaurantIndexItem extends React.Component {
         return (
             <div className="rest-index-item">
                 <div className="index-item-info">
-                    <span className="index-item-name">{name}</span>
+                    <span className="index-item-name" onClick={this.handleClick}>{name}</span>
                     <span className="index-item-address">{address}</span>
                     <span className="index-item-cuisine">{cuisine}</span>
                 </div>

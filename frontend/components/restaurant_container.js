@@ -5,10 +5,10 @@ import { withRouter } from 'react-router-dom';
 import Restaurant from './restaurant';
 
 const mapStateToProps = state => {
+
     return ({
         restaurant: state.entities.restaurants,
-        currentUserId: state.session.id,
-        users: state.entities.users
+        currentUserId: state.session.id
     })
 }
 

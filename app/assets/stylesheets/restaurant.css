@@ -1,0 +1,35 @@
+.rest-index-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    position: relative;
+    padding-bottom: 2rem;
+    margin: 0 20rem;
+    min-width: 50rem;
+}
+
+.rest-index-item {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0 1rem 12rem;
+    border-bottom: 1px solid lightgrey;
+}
+
+.index-item-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.index-item-name {
+    font-weight: bold;
+    font-size: 26px;
+    color: #247f9e;
+}
+
+.index-item-name:hover {
+    cursor: pointer;
+}
+

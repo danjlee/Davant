@@ -15,7 +15,7 @@ class Search extends React.Component {
     update(field) {
         return (e) => {
             let string = e.target.value;
-            if (string.length > 0) {
+            if (string.length >= 0) {
                 this.setState({ [field]: string });
             }
         };
@@ -29,8 +29,6 @@ class Search extends React.Component {
         });
     }
 
-
-
     render() {
         if (this.props.location.pathname === '/') {
             return (
@@ -42,7 +40,7 @@ class Search extends React.Component {
                         </div>
                         <input type="text" onChange={this.update('keyword')} value={this.state.keyword} placeholder="Location, Restaurant, or Cuisine" />
                     </span>
-                    <button type="submit " className="search-submit">Let's go</button>
+                    <button type="submit" className="search-submit">Let's go</button>
                 </form>
             );
         } else {
@@ -56,7 +54,7 @@ class Search extends React.Component {
                     </div>
                     <input type="text" onChange={this.update("keyword")} value={this.state.keyword} placeholder="Location, Restaurant, or Cuisine" />
                   </span>
-                  <button type="submit " className="search-submit">Find a Table</button>
+                  <button type="submit" className="search-submit">Find a Table</button>
                 </form>
               </div>
             );
