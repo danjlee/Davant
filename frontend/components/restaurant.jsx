@@ -8,7 +8,7 @@ class Restaurant extends React.Component {
     }
 
     componentDidMount() {
-      debugger;
+      
       this.props.fetchRestaurant(this.props.match.params.restId);
     }
 
@@ -16,7 +16,7 @@ class Restaurant extends React.Component {
         
         if (this.props.restaurant.id === undefined) {
             return(
-                <div>HELLO</div>
+                <div>There is no information</div>
             );
         }
 

@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Restaurant from './restaurant';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
     return ({
-        restaurant: state.entities.restaurants,
+        restaurant: state.entities.restaurants[ownProps.match.params.restId],
         users: state.entities.users,
-        currentUserId: state.session.id
+        // currentUserId: state.session.id
     })
 }
 
