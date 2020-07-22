@@ -1,3 +1,5 @@
+/* restaurant index */
+
 .rest-index-container {
     display: flex;
     flex-direction: column;
@@ -33,3 +35,105 @@
     cursor: pointer;
 }
 
+.restaurant-search-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.restaurant-search-error div {
+    width: 100%;
+    text-align: center;
+    color: grey;
+    font-weight: bold;
+}
+
+.restaurant-search-error p {
+    text-align: center;
+}
+
+/* restaurant show */
+
+.rest-banner {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.rest-show {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.rest-main {
+    width: 45rem;
+    min-height: fit-content;
+    border: 1px solid whitesmoke;
+    background-color: white;
+    margin: -3rem 0 1rem 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 0 16px 24px 2px black; */
+}
+
+.rest-main > * {
+    margin: 0 1rem 0 1rem;
+    opacity: 0.5;
+}
+
+.show-item-name {
+    font-size: 55px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    line-height: 6rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.show-item-desc {
+    padding: 1rem 0;
+}
+
+.rest-details {
+    display: flex;
+    flex-direction: column;
+    max-width: 22rem;
+    height: 27rem;
+    border: 1px solid whitesmoke;
+    position: relative;
+    margin: 1rem 0 1rem 3rem;
+    /* box-shadow: 0 16px 24px 2px black; */
+}
+
+.rest-details > * {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.show-item-address {
+    padding-top: 1rem;
+    padding-bottom: .3rem;
+}
+
+.show-item-phone {
+    padding-bottom: 1rem;
+}
+
+i {
+    height: 25px;
+    width: 25px;
+    opacity: 0.7;
+}
+
+.rest-details p {
+    font-size: 14px;
+    font-weight: lighter;
+    padding-left: 1.5rem;
+    opacity: 0.7;
+    margin: 0;
+}

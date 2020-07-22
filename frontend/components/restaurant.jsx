@@ -8,12 +8,10 @@ class Restaurant extends React.Component {
     }
 
     componentDidMount() {
-      
       this.props.fetchRestaurant(this.props.match.params.restId);
     }
 
     render() {
-        
         if (this.props.restaurant.id === undefined) {
             return(
                 <div>There is no information</div>
@@ -24,12 +22,13 @@ class Restaurant extends React.Component {
         
         return (
           <>
+            <div className="rest-banner"><i>BANNER GOES HERE</i></div>
             <div className="rest-show">
               <div className="rest-main">
                 <span className="show-item-name">{name}</span>
                 <span className="show-item-desc">{description}</span>
                 <span className="show-item-menu">
-                  <a href={menu}>View menu on restaurant's website</a>
+                  <a href={menu}>View restaurant's menu</a>
                 </span>
               </div>
 
