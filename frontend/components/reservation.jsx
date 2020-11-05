@@ -88,11 +88,51 @@ class Reservation extends React.Component {
                     </i>
                 </label>
 
-                <label htmlFor="">
-
+                <label className="label-date">Date
+                    <DayPickerInput
+                        className="input-date"
+                        value={date}
+                        onDayChange={this.handleDayChange}
+                        dayPickerProps={{
+                            selectedDays: date,
+                            todayButton: 'Today',
+                            disabledDays: { before: new Date() }
+                        }}
+                        inputProps={{ style: { height: 40, width: 140, border: 'none', fontSize: 16 }}}
+                    />
+                    <i className="downarrow-date">
+                        <img src={window.downarrow} />
+                    </i>
                 </label>
+
+                <label className="label-time">Time
+                        <select className="input-time" onChange={this.update('time')}>
+                            <option value="12:00 PM" defaultValue="selected">12:00 PM</option>
+                            {this.timeMenu()}
+                        </select>
+                        <i className="downarrow-time">
+                            <img src={window.downarrow} />
+                        </i>
+                </label>
+                {checkUser}
             </div>
         )
     }
 
+    timeMenu() {
+        let arr = [];
+
+        for (let i = 1; i <= 11; i++) {
+            arr.push(i)
+        }
+
+        return arr.map( num => (
+            <option key={num} value={num + ":00 PM"}>
+                {num + ":00 PM"}
+            </option>
+        ));
+    }
+
 }
+
+export default Reservation;
