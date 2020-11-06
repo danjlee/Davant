@@ -17,5 +17,37 @@ class ReservationIndexItems extends React.Component {
 
     }
 
-    
+    handleClick() {
+        this.props.history.push(`/restaurants/${this.props.restaurant.id}`);
+    }
+
+    cancel(e) {
+        e.preventDefault();
+        this.props.cancelRes(this.props.reservation.id);
+    }
+
+    cancelCheck() {
+        return this.props.cancel ? (<button className="res-cancel-btn" onClick={this.cancel}>Cancel Reservation</button>) : (<></>)
+    }
+
+    render() {
+        if (!this.props.restaurant || !this.props.reservation) return null;
+
+        const { name, address } = this.props.restaurant;
+        const {date, time, party } = this.props.reservation;
+
+        return  (
+            <div className="res-index-item">
+                <div className="res-item-info">
+                    <span className="res-item-name" onClick={this.handleClick}>{name}</span>
+                    <span className="res-item-address">{address}</span>
+                    <span className="res-item-time">{date} at {time}</span>
+                    <span className="res-item-party">For party of {party}</span>
+                    {this.cancelCheck()}
+                </div>
+            </div>
+        );
+    }
 }
+
+export default withRouter(connect(null, mapDispatchToProps)(ReservationIndexItems));

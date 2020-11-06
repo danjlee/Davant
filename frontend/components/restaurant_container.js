@@ -9,7 +9,8 @@ const mapStateToProps = (state, ownProps) => {
     return ({
         restaurant: state.entities.restaurants,
         users: state.entities.users,
-        currentUserId: state.session.id
+        currentUserId: state.session.id,
+        reservations: state.entities.reservations
     })
 }
 

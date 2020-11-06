@@ -1,6 +1,6 @@
 import React from 'react';
-import DayPickerInput from 'react-day-picker/DayPickerInput';
-import 'react-day-picker/lib/style.css';
+// import DayPickerInput from 'react-day-picker/DayPickerInput';
+// import 'react-day-picker/lib/style.css';
 
 class Reservation extends React.Component {
 
@@ -49,7 +49,7 @@ class Reservation extends React.Component {
 
         return arr.map(num => (
             <option key={num} value={num}>
-                { "For " + num }
+                { num }
             </option>
         ))
     }
@@ -65,7 +65,7 @@ class Reservation extends React.Component {
             )
         } else {
             checkUser = (
-                <button className="reserver-form-submit" onClick={this.handleSubmit}>
+                <button className="reserve-form-submit" onClick={this.handleSubmit}>
                     Book a Table
                 </button>
             )
@@ -80,7 +80,7 @@ class Reservation extends React.Component {
 
                 <label className="party-size">Party Size
                     <select className="res-input party" onChange={this.update.bind('party')}>
-                        <option value="For 1" defaultValue="selected">For 1</option>
+                        <option value="1" defaultValue="selected">1</option>
                         {this.numParty()}
                     </select>
                     <i className="downarrow-party">
@@ -89,7 +89,7 @@ class Reservation extends React.Component {
                 </label>
 
                 <label className="label-date">Date
-                    <DayPickerInput
+                    {/* <DayPickerInput
                         className="input-date"
                         value={date}
                         onDayChange={this.handleDayChange}
@@ -99,7 +99,7 @@ class Reservation extends React.Component {
                             disabledDays: { before: new Date() }
                         }}
                         inputProps={{ style: { height: 40, width: 140, border: 'none', fontSize: 16 }}}
-                    />
+                    /> */}
                     <i className="downarrow-date">
                         <img src={window.downarrow} />
                     </i>
