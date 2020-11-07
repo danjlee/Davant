@@ -10,7 +10,7 @@ class Reservation extends React.Component {
         this.state = {
             user_id: this.props.currentUserId,
             rest_id: this.props.restId,
-            party: '1',
+            party_size: '1',
             date: new Date(),
             time: '12:00 PM'
         }
@@ -79,7 +79,7 @@ class Reservation extends React.Component {
                 <span className="reserver-form-head">Make a reservation</span>
 
                 <label className="party-size">Party Size
-                    <select className="res-input party" onChange={this.update.bind('party')}>
+                    <select className="res-input party" onChange={this.update.bind('party_size')}>
                         <option value="1" defaultValue="selected">1</option>
                         {this.numParty()}
                     </select>

@@ -13,7 +13,7 @@
 #  updated_at :datetime         not null
 #
 class Reservation < ApplicationRecord
-    validates :user_id, :rest_id, :time, :date, :party_size, :occassion, presence: true
+    validates :user_id, :rest_id, :time, :date, :party_size, :occasion, presence: true
 
     belongs_to :user,
     foreign_key: :user_id,

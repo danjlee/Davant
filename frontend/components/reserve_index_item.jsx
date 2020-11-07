@@ -34,7 +34,7 @@ class ReservationIndexItems extends React.Component {
         if (!this.props.restaurant || !this.props.reservation) return null;
 
         const { name, address } = this.props.restaurant;
-        const {date, time, party } = this.props.reservation;
+        const {date, time, party_size } = this.props.reservation;
 
         return  (
             <div className="res-index-item">
@@ -42,7 +42,7 @@ class ReservationIndexItems extends React.Component {
                     <span className="res-item-name" onClick={this.handleClick}>{name}</span>
                     <span className="res-item-address">{address}</span>
                     <span className="res-item-time">{date} at {time}</span>
-                    <span className="res-item-party">For party of {party}</span>
+                    <span className="res-item-party">For party of {party_size}</span>
                     {this.cancelCheck()}
                 </div>
             </div>
