@@ -1,6 +1,6 @@
 import React from 'react';
-// import DayPickerInput from 'react-day-picker/DayPickerInput';
-// import 'react-day-picker/lib/style.css';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import 'react-day-picker/lib/style.css';
 
 class Reservation extends React.Component {
 
@@ -89,17 +89,17 @@ class Reservation extends React.Component {
                 </label>
 
                 <label className="label-date">Date
-                    {/* <DayPickerInput
+                    <DayPickerInput
                         className="input-date"
                         value={date}
-                        onDayChange={this.handleDayChange}
+                        onDayChange={this.handleDate}
                         dayPickerProps={{
                             selectedDays: date,
                             todayButton: 'Today',
                             disabledDays: { before: new Date() }
                         }}
                         inputProps={{ style: { height: 40, width: 140, border: 'none', fontSize: 16 }}}
-                    /> */}
+                    />
                     <i className="downarrow-date">
                         <img src={window.downarrow} />
                     </i>

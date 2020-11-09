@@ -43,5 +43,9 @@
   "bugs": {
     "url": "https://github.com/danjlee/Davant/issues"
   },
-  "homepage": "https://github.com/danjlee/Davant#readme"
+  "homepage": "https://github.com/danjlee/Davant#readme",
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "style-loader": "^2.0.0"
+  }
 }
