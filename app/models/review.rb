@@ -18,9 +18,9 @@ class Review < ApplicationRecord
     validates :overall, :food, :ambience, :service, inclusion: { in: [1, 2, 3, 4, 5] }, presence: true
     validates :comment, length: { maximum: 500 }
 
-    belongs_to :restaurant,
-    foreign_key: :rest_id,
-    class_name: :Restaurant
+    belongs_to :reservation,
+    foreign_key: :res_id,
+    class_name: :Reservation
 
     belongs_to :user,
     foreign_key: :author_id,

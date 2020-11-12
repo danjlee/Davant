@@ -1,6 +1,8 @@
 import { RECEIVE_RES, RECEIVE_ALL_RES, DELETE_RES } from '../actions/reservation_actions';
 import { RECEIVE_RESTAURANT } from '../actions/restaurant_actions';
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_REVIEW, REMOVE_REVIEW } from '../actions/review_actions';
+
 
 const ReservationsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -17,6 +19,14 @@ const ReservationsReducer = (state = {}, action) => {
             return Object.assign({}, state, action.payload.reservations);
         case RECEIVE_CURRENT_USER:
             return Object.assign({}, action.payload.reservations);
+        case RECEIVE_REVIEW:
+            var res = state[action.review.res_id];
+            var newRes = Object.assign({}, res, { review: null });
+            return Object.assign({}, state, { [action.review.res_id]: newRes });
+        case REMOVE_REVIEW:
+            var res = state[action.review.res_id];
+            var newRes = Object.assign({}, res, { review: null });
+            return Object.assign({}, state, { [action.review.res_id]: newRes });
         default:
             return state;
     }
