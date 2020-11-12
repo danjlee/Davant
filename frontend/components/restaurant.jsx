@@ -22,7 +22,7 @@ class Restaurant extends React.Component {
         }
 
         const { name, address, location, phone_number, cuisine, menu, hours, dress_code, exec_chef, description } = this.props.restaurant;
-        
+      
         return (
           <>
             <div className="rest-banner"><i>BANNER GOES HERE</i></div>
