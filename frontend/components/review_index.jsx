@@ -35,11 +35,40 @@ class ReviewIndex extends React.Component {
 
                     <span className="review-right">
                         <span className="review-stars-container">
-                            <div className="review-stars" style={style}></div>
+                            {/* <div className="review-stars" style={style}></div> */}
+                            <h5> Dined on {res.date} </h5>
                         </span>
+
+                        <span className="review-ratings">
+                            <h5>Overall</h5>
+                            <h5 className="review-rating"> {review.overall} </h5>
+                            <h5>Food</h5>
+                            <h5 className="review-rating"> {review.food} </h5>
+                            <h5>Service</h5>
+                            <h5 className="review-rating"> {review.service} </h5>
+                            <h5>Ambience</h5>
+                            <h5 className="review-rating"> {review.ambience} </h5>
+                        </span>
+                        <h4 className="review-comment"> {review.comment} </h4>
                     </span>
                 </div>
             )
         });
+
+        overall /= Object.keys(this.props.reviews).length;
+        food /= Object.keys(this.props.reviews).length;
+        service /= Object.keys(this.props.reviews).length;
+        ambience /= Object.keys(this.props.reviews).length;
+
+
+        return (
+            <div className="reviews-container">
+                <ul className="members-reviews">
+                    { reviews }
+                </ul>
+            </div>
+        )
     }
 }
+
+export default ReviewIndex;

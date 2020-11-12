@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ReservatonContainer from './reservation_container';
+import ReviewIndex from './review_index';
+
 
 class Restaurant extends React.Component {
     constructor(props) {
@@ -29,8 +31,15 @@ class Restaurant extends React.Component {
                 <span className="show-item-name">{name}</span>
                 <span className="show-item-desc">{description}</span>
                 <span className="show-item-menu">
-                  <a href={menu}>View restaurant's menu</a>
+                  <a href={menu}>View menu</a>
                 </span>
+
+                <div className="revs-container">
+                  {this.props.reviews ?
+                  <ReviewIndex reviews={this.props.reviews} users={this.props.users} reservations={this.props.reservations} /> :
+                  <span className="no-reviews"> No reviews yet!</span>
+                }
+                </div>
               </div>
 
               <div className="rest-details">
