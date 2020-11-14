@@ -17,6 +17,7 @@ const ReviewsReducer = (state = {}, action) => {
             return newState;
         default:
             return state;
+            
     }
 };
 
