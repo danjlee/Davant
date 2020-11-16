@@ -11,6 +11,6 @@
 // const mapDispatchToProps = dispatch => ({
 //     fetchAllRes: userId => dispatch(fetchAllRes(userId)),
 //     cancelRes: reservationId => dispatch(cancelRes(reservationId))
-// });
+// })
 
 // export default connect(mapStateToProps, mapDispatchToProps)(User);
