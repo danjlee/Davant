@@ -24,7 +24,7 @@ export const fetchRes = id => dispatch => (
 );
 
 export const fetchAllRes = userId => dispatch => (
-    ReservationAPI.fetchAllReservation(userId).then(res => dispatch(receivAllRes(res)))
+    ReservationAPI.fetchAllReservation(userId).then(res => dispatch(receiveAllRes(res)))
 );
 
 export const createRes = res => dispatch => (
