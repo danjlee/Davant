@@ -17,6 +17,10 @@ class User extends React.Component {
     }
 
     // sortDates(array, descend) {
+    //     if (array.length <= 1) {
+    //         return array;
+    //     }
+
 
     // }
 

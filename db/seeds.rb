@@ -5,11 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
 User.destroy_all
 Restaurant.destroy_all
+Reservation.destroy_all
+Review.destroy_all
 
-User.create!({
+user1 = User.create!({
     fname: 'Guest',
     lname: 'Davant',
     email: 'guest@davant.com',
@@ -17,9 +20,63 @@ User.create!({
     location: 'New York'
 })
 
+user2 = User.create!({
+    fname: 'Dan',
+    lname: 'Lee',
+    email: 'danlee@davant.com',
+    password: 'davant',
+    location: 'New York'
+})
+
+user3 = User.create!({
+    fname: 'Emily',
+    lname: 'Blunt',
+    email: 'eblunt@davant.com',
+    password: 'davant',
+    location: 'New York'
+})
+
+user4 = User.create!({
+    fname: 'John',
+    lname: 'Doe',
+    email: 'jdoe@davant.com',
+    password: 'davant',
+    location: 'New York'
+})
+
+user5 = User.create!({
+    fname: 'Ryan',
+    lname: 'Reynolds',
+    email: 'reynolds@davant.com',
+    password: 'davant',
+    location: 'New York'
+})
+
+user6 = User.create!({
+    fname: 'Dave',
+    lname: 'Chappelle',
+    email: 'dc@davant.com',
+    password: 'davant',
+    location: 'New York'
+})
+
+30.times do 
+    User.create({
+        fname: Faker::Name.first_name,
+        lname: Faker::Name.last_name,
+        email: Faker::Internet.unique.email,
+        password: 'davant',
+        location: ['New York', 'Los Angeles', 'Chicago', 'San Francisco', 'Miami', 'Las Vegas', 'London', 'Tokyo', 'Sydney', 'Berlin', 'Mexico City', 'Dublin'].sample
+        
+    })
+end
+
 # restaurants
 
-Restaurant.create!({
+min = Time.now - 3.years
+max = Time.now
+
+rest1 = Restaurant.create!({
     name: 'Sfoglia',
     address: '135 E. 92nd Street New York, NY 10028',
     location: 'New York',
@@ -32,7 +89,7 @@ Restaurant.create!({
     description: 'N/A'
 })
 
-Restaurant.create!({
+rest2 = Restaurant.create!({
     name: 'Bar Boulud',
     address: '1900 Broadway New York, NY 10023',
     location: 'New York',
@@ -45,7 +102,7 @@ Restaurant.create!({
     description: 'N/A'
 })
 
-Restaurant.create!({
+rest3 = Restaurant.create!({
     name: 'Appleseed',
     address: '123 johnny street',
     location: 'New York',
@@ -56,4 +113,23 @@ Restaurant.create!({
     dress_code: 'Casual',
     exec_chef: 'Jen Doe',
     description: 'best place'
+})
+
+res = Reservation.create!({
+    user_id: [user2.id, user3.id, user4.id, user5.id, user6.id].sample,
+    rest_id: rest1.id,
+    time: "#{("1".."12").to_a.sample}:00 PM",
+    date: rand(min..max).to_s[0..9],
+    party_size: (1..12).to_a.sample,
+    occasion: ['none', 'birthday', 'anniversary', 'holiday'].sample
+})
+
+Review.create({
+    rest_id: res.id,
+    author_id: res.user_id,
+    comment: Faker::Restaurant.review,
+    overall: (1..5).to_a.sample,
+    food: (1..5).to_a.sample,
+    service: (1..5).to_a.sample,
+    ambience: (1..5).to_a.sample
 })
