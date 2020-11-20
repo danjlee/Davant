@@ -35,7 +35,7 @@ class ReservationIndexItems extends React.Component {
 
         const { name, address } = this.props.restaurant;
         const {date, time, party_size } = this.props.reservation;
-
+        debugger;
         return  (
             <div className="res-index-item">
                 <div className="res-item-info">

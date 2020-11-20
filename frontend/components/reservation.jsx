@@ -12,7 +12,8 @@ class Reservation extends React.Component {
             rest_id: this.props.restId,
             party_size: '1',
             date: new Date(),
-            time: '12:00 PM'
+            time: '12:00 PM',
+            occasin: 'None'
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,9 +35,9 @@ class Reservation extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         let result = Object.assign({}, this.state);
-        result.date = this.state.date.toISOString().substring(0, 10);
+        // result.date = this.state.date.toISOString().substring(0, 10);
         this.props.createRes(result).then(() => {
-            this.props.history.push('/user');
+            this.props.history.push(`/user`);
         });
     }
 
@@ -73,6 +74,7 @@ class Reservation extends React.Component {
 
         const { date } = this.state;
 
+        
         return(
             <div className="reserve-form-container">
 
@@ -113,6 +115,15 @@ class Reservation extends React.Component {
                         <i className="downarrow-time">
                             <img src={window.downarrow} />
                         </i>
+                </label>
+                <label>Occasion
+                        <select className="res-input-party" onChange={this.update('occasion')}>
+                            <option value="none">None</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="anniversary">Anniversary</option>
+                            <option value="valentine">Valentine's Day</option>
+                            <option value="mother">Mother's Day</option>
+                        </select>
                 </label>
                 {checkUser}
             </div>

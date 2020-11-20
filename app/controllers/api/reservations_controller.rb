@@ -18,9 +18,9 @@ class Api::ReservationsController < ApplicationController
 
     def create
         @reservation = Reservation.new(res_params)
-
+    
         if @reservation.save
-            render "api/reservations/show"
+            render "/api/reservations/show"
         else
             render json: @reservation.errors.full_messages, status: 422
         end
@@ -40,6 +40,6 @@ class Api::ReservationsController < ApplicationController
     private
 
     def res_params
-        params.require(:reservation).permit(:user_id, :rest_id, :party_size, :date, :time)
+        params.require(:reservation).permit(:user_id, :rest_id, :party_size, :date, :time, :occasion)
     end
 end

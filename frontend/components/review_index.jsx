@@ -7,7 +7,7 @@ class ReviewIndex extends React.Component {
     }
 
     render() {
-        if (Object.keys(this.props.review).length === 0) { 
+        if (Object.keys(this.props.reviews).length === 0) { 
             return null; 
         }
 
@@ -22,9 +22,9 @@ class ReviewIndex extends React.Component {
             service += review.service;
             ambience += review.ambience;
 
-            const user = this.props.users[review.user_id];
-            const res = this.props.reservations[review.res_id];
-
+            const user = this.props.users[review.author_id];
+            const res = this.props.reservations[review.rest_id];
+            
             return (
                 <div className="review-index-item" key={review.id}>
                     <span className="review-left">
@@ -35,7 +35,7 @@ class ReviewIndex extends React.Component {
 
                     <span className="review-right">
                         <span className="review-stars-container">
-                            {/* <div className="review-stars" style={style}></div> */}
+                            <div className="review-stars">1 to 5 stars</div>
                             <h5> Dined on {res.date} </h5>
                         </span>
 
