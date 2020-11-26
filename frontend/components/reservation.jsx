@@ -13,7 +13,7 @@ class Reservation extends React.Component {
             party_size: '1',
             date: new Date(),
             time: '12:00 PM',
-            occasin: 'None'
+            occasion: 'None'
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);

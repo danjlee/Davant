@@ -90,7 +90,7 @@ rest1 = Restaurant.create!(
 )
 
 res = Reservation.create!(
-    user_id: [user2.id, user3.id, user4.id, user5.id, user6.id].sample,
+    user_id: user2.id,
     rest_id: rest1.id,
     time: "#{("1".."12").to_a.sample}:00 PM",
     date: rand(min..max).to_s[0..9],
@@ -98,14 +98,14 @@ res = Reservation.create!(
     occasion: ['none', 'birthday', 'anniversary', 'holiday'].sample
 )
 
-Review.create(
-    rest_id: rest1.id,
-    author_id: user2.id,
+Review.create!(
+    rest_id: res.rest_id,
+    author_id: res.user_id,
     comment: "Hello",
-    overall: (1..5).to_a.sample,
-    food: (1..5).to_a.sample,
-    service: (1..5).to_a.sample,
-    ambience: (1..5).to_a.sample
+    overall: 1,
+    food: 1,
+    service: 1,
+    ambience: 1
 )
 
 rest2 = Restaurant.create!(
