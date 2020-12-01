@@ -60,16 +60,16 @@ user6 = User.create!(
     location: 'New York'
 )
 
-30.times do 
-    User.create(
-        fname: Faker::Name.first_name,
-        lname: Faker::Name.last_name,
-        email: Faker::Internet.unique.email,
-        password: 'davant',
-        location: ['New York', 'Los Angeles', 'Chicago', 'San Francisco', 'Miami', 'Las Vegas', 'London', 'Tokyo', 'Sydney', 'Berlin', 'Mexico City', 'Dublin'].sample
+# 30.times do 
+#     User.create(
+#         fname: Faker::Name.first_name,
+#         lname: Faker::Name.last_name,
+#         email: Faker::Internet.unique.email,
+#         password: 'davant',
+#         location: ['New York', 'Los Angeles', 'Chicago', 'San Francisco', 'Miami', 'Las Vegas', 'London', 'Tokyo', 'Sydney', 'Berlin', 'Mexico City', 'Dublin'].sample
         
-    )
-end
+#     )
+# end
 
 # restaurants
 
