@@ -73,8 +73,8 @@ user6 = User.create!(
 
 # restaurants
 
-# min = Time.now - 3.years
-# max = Time.now
+min = Time.now - 3.years
+max = Time.now
 
 rest1 = Restaurant.create!(
     name: 'Sfoglia',
@@ -89,24 +89,24 @@ rest1 = Restaurant.create!(
     description: 'N/A'
 )
 
-# res = Reservation.create!(
-#     user_id: user2.id,
-#     rest_id: rest1.id,
-#     time: "#{("1".."12").to_a.sample}:00 PM",
-#     date: rand(min..max).to_s[0..9],
-#     party_size: (1..12).to_a.sample,
-#     occasion: ['none', 'birthday', 'anniversary', 'holiday'].sample
-# )
+res = Reservation.create!(
+    user_id: user2.id,
+    rest_id: rest1.id,
+    time: "#{("1".."12").to_a.sample}:00 PM",
+    date: rand(min..max).to_s[0..9],
+    party_size: (1..12).to_a.sample,
+    occasion: ['none', 'birthday', 'anniversary', 'holiday'].sample
+)
 
-# Review.create!(
-#     rest_id: res.rest_id,
-#     author_id: res.user_id,
-#     comment: "Hello",
-#     overall: 1,
-#     food: 1,
-#     service: 1,
-#     ambience: 1
-# )
+Review.create!(
+    res_id: res.id,
+    author_id: res.user_id,
+    comment: "Hello",
+    overall: 1,
+    food: 1,
+    service: 1,
+    ambience: 1
+)
 
 rest2 = Restaurant.create!(
     name: 'Bar Boulud',

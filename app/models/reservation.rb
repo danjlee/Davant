@@ -24,7 +24,7 @@ class Reservation < ApplicationRecord
     class_name: :Restaurant
 
     has_one :review,
-    foreign_key: :rest_id,
+    foreign_key: :res_id,
     class_name: :Review
 
 end

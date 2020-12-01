@@ -6,3 +6,13 @@
     end
 end
 
+@reservations.each do |res|
+    json.reviews do
+        if (res.review)
+            json.set! res.review.id do
+                json.extract! res.review, :id, :author_id, :res_id, :overall, :food, :service, :ambience, :comment
+            end
+        end
+    end
+end
+

@@ -3,6 +3,7 @@ import { closeModal } from '../actions/modal_actions';
 import { connect } from 'react-redux';
 import SignUpFormContainer from './signup_form_container';
 import SignInFormContainer from './signin_form_container';
+import CreateReviewForm from './create_review_form';
 
 class Modal extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class Modal extends React.Component {
             return null;
         }
         
-        const { modal } = this.props.payload;
+        const { modal, review } = this.props.payload;
 
         switch (modal) {
             case 'signup':
@@ -24,6 +25,9 @@ class Modal extends React.Component {
                 break;
             case 'signin':
                 component = <SignInFormContainer />;
+                break;
+            case 'newreview':
+                component = <CreateReviewForm review={review}/>;
                 break;
             default:
                 component = null;

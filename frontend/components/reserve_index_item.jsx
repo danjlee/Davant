@@ -5,8 +5,8 @@ import { cancelRes } from '../actions/reservation_actions';
 import { openModal } from '../actions/modal_actions';
 
 const mapDispatchToProps = (dispatch) => ({
-    cancelRes: (id) => dispatch(cancelRes(id))
-    // openModal: (modal, review) => dispatch(openModal(modal, review))
+    cancelRes: (id) => dispatch(cancelRes(id)),
+    openModal: (modal, review) => dispatch(openModal(modal, review))
 });
 
 class ReservationIndexItems extends React.Component {
@@ -14,6 +14,7 @@ class ReservationIndexItems extends React.Component {
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.cancel = this.cancel.bind(this);
+        this.makeReview = this.makeReview.bind(this);
 
     }
 
@@ -30,6 +31,21 @@ class ReservationIndexItems extends React.Component {
         return this.props.cancel ? (<button className="res-cancel-btn" onClick={this.cancel}>Cancel Reservation</button>) : (<></>)
     }
 
+    makeReview() {
+        const { cancel, review, reservation } = this.props;
+        // if (cancel === false) {
+        //     if (review) {
+            //     return (
+            //         <button className="res-cancel-btn" onClick={() => this.props.openModal('editreview', review)}>Edit Review</button>
+            //     )
+            // } else {
+                return (
+                    <button className="res-cancel-btn" onClick={() => this.props.openModal('newreview', {res_id: reservation.id, date: reservation.date})}>Write a Review</button>
+                )
+        //     }
+        // }
+    }
+
     render() {
         if (!this.props.restaurant || !this.props.reservation) return null;
 
@@ -43,6 +59,7 @@ class ReservationIndexItems extends React.Component {
                     <span className="res-item-address">{address}</span>
                     <span className="res-item-time">{date} at {time}</span>
                     <span className="res-item-party">For party of {party_size}</span>
+                    {this.makeReview()}
                     {this.cancelCheck()}
                 </div>
             </div>

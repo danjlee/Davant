@@ -7,6 +7,7 @@ class Api::ReviewsController < ApplicationController
             render "api/reviews/show"
         else
             render json: @review.errors.full_message, status: 422
+        end
     end
 
     def update
