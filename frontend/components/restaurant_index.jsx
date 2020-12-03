@@ -32,6 +32,7 @@ class RestaurantIndex extends React.Component {
         return (
             <>
                 <Search />
+                <h3>Best Restaurants</h3>
                 <div className="rest-index-container">
                     {this.restaurant_index()}
                 </div>
