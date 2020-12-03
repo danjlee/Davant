@@ -22,7 +22,7 @@ class Restaurant extends React.Component {
         }
 
         const { name, address, location, phone_number, cuisine, menu, hours, dress_code, exec_chef, description } = this.props.restaurant;
-      
+        debugger;
         return (
           <>
             <div className="rest-banner"><i>BANNER GOES HERE</i></div>
@@ -39,6 +39,7 @@ class Restaurant extends React.Component {
                   <ReviewIndex reviews={this.props.reviews} users={this.props.users} reservations={this.props.reservations} /> :
                   <span className="no-reviews"> No reviews yet!</span>
                 }
+                <h2>Reviews should go here, but it's not showing</h2>
                 </div>
               </div>
 

@@ -6,7 +6,7 @@ const ReviewsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_RESTAURANT:
-            return Object.assign({}, action.reviews);
+            return Object.assign({}, action.payload.reviews);
         case RECEIVE_ALL_RESTAURANTS:
             return Object.assign({}, action.reviews);
         case RECEIVE_REVIEW:

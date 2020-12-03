@@ -16,15 +16,15 @@ class ReviewIndex extends React.Component {
         let service = 0;
         let ambience = 0;
 
-        const reviews = Object.values(this.props.reviews).map(review => {
+        const allReviews = Object.values(this.props.reviews).map(review => {
             overall += review.overall;
             food += review.food;
             service += review.service;
             ambience += review.ambience;
 
-            const user = this.props.users[review.author_id.id];
-            const res = this.props.reservations[review.res_id];
-            
+            const user = this.props.users[review.author_id];
+            const res = this.props.reservations[review.rest_id];
+
             return (
                 <div className="review-index-item" key={review.id}>
                     <span className="review-left">
@@ -36,7 +36,7 @@ class ReviewIndex extends React.Component {
                     <span className="review-right">
                         <span className="review-stars-container">
                             <div className="review-stars">1 to 5 stars</div>
-                            <h5> Dined on {res.date} </h5>
+                            {/* <h5> Dined on {res.date} </h5> */}
                         </span>
 
                         <span className="review-ratings">
@@ -64,10 +64,10 @@ class ReviewIndex extends React.Component {
         return (
             <div className="reviews-container">
                 <ul className="members-reviews">
-                    { reviews }
+                    { allReviews }
                 </ul>
             </div>
-        )
+        );
     }
 }
 
