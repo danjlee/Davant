@@ -10,10 +10,10 @@ end
     end
 end
 
-# @restaurant.reviews.each do |review|
-#     json.users do
-#         json.set! review.author_id do 
-#             json.extract! review.user, :id, :fname, :lname, :location
-#         end
-#     end
-# end
+@restaurant.reviews.each do |review|
+    json.users do
+        json.set! review.author_id do 
+            json.extract! review.user, :id, :fname, :lname, :location
+        end
+    end
+end

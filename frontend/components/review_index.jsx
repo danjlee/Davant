@@ -22,7 +22,7 @@ class ReviewIndex extends React.Component {
             service += review.service;
             ambience += review.ambience;
 
-            const user = this.props.users[review.author_id];
+            const user = this.props.users[review.author_id.id];
             const res = this.props.reservations[review.res_id];
             
             return (

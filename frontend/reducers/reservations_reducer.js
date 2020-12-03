@@ -17,9 +17,9 @@ const ReservationsReducer = (state = {}, action) => {
             return nextState;
         case RECEIVE_RESTAURANT:
             return Object.assign({}, state, action.payload.reservations);
-        // case RECEIVE_CURRENT_USER:
-        //     debugger;
-        //     return Object.assign({}, action.payload.reservations);
+        case RECEIVE_CURRENT_USER:
+            debugger;
+            return Object.assign({}, action.currentUser.reservations);
         case RECEIVE_REVIEW:
             var res = state[action.review.res_id];
             var newRes = Object.assign({}, res, { review: null });

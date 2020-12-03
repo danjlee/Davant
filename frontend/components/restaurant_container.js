@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => {
         restaurant: state.entities.restaurants,
         users: state.entities.users,
         currentUserId: state.session.id,
-        reservations: state.entities.reservations
+        reservations: state.entities.reservations,
+        reviews: state.entities.reviews
     })
 }
 
