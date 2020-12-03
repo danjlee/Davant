@@ -29,6 +29,7 @@ class Api::ReviewsController < ApplicationController
             render json: ["Review does not exist."]
         end
 
+        
     end
 
     private

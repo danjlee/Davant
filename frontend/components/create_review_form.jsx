@@ -22,8 +22,8 @@ class CreateReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            res_id: this.props.review.res_id,
-            user_id: this.props.currentUser.id,
+            res_id: this.props.review.id,
+            author_id: this.props.currentUser.id,
             comment: '',
             overall: 5,
             food: 5,
