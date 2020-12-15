@@ -12,21 +12,17 @@ class FavoriteIndexItem extends React.Component {
         super(props);
     }
 
-    handleClick() {
-        this.props.history.push(`/restaurants/${this.props.restaurant.id}`)
-    }
-
     render() {
         const { name, cuisine, location } = this.props.restaurant;
 
         return (
             <div className="fav-item">
-                <div className="fav-thumb" onClick={this.handleClick}>PICTURE HERE</div>
+                <div className="fav-thumb">PICTURE HERE</div>
 
                 <div className="fav-item-info">
-                    <span className="fav-item-name" onClick={this.handleClick}>{name}</span>
+                    <span className="fav-item-name">{name}</span>
                     <span className="fav-location">{cuisine} {location}</span>
-                    <span className="reserve-now" onClick={this.handleClick}>Reserve Now</span>
+                    <span className="reserve-now">Reserve Now</span>
                 </div>
             </div>
         );

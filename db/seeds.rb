@@ -11,6 +11,7 @@ User.destroy_all
 Restaurant.destroy_all
 Reservation.destroy_all
 Review.destroy_all
+Favorite.destroy_all
 
 user1 = User.create!(
     fname: 'Guest',

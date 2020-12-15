@@ -1,28 +1,37 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ReservationIndexItem from './reserve_index_item';
+import FavoriteIndexItem from './favorite_index_item';
 
 class User extends React.Component {
     constructor(props) {
         super(props);
 
+        this.allFavorites = this.allFavorites.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchAllRes(this.props.currentUserId);
+        this.props.fetchFavs(this.props.currentUserId);
     }
 
     handleClick() {
         this.props.history.push(`/restaurants/${this.props.restaurant.id}`);
     }
 
-    // sortDates(array, descend) {
-    //     if (array.length <= 1) {
-    //         return array;
-    //     }
+    allFavorites() {
+        let favs = this.props.favorites;
 
-
-    // }
+        if(Object.keys(favs).length === 0) {
+            return (
+                <div>No favorites</div>
+            )
+        } else {
+            return Object.values(favs).map((fav, idx) => (
+                <FavoriteIndexItem restaurant={fav.restaurant} fav={fav} key={idx} />
+            ));
+        }
+    }
 
 
     upcomingRes() {
@@ -57,6 +66,11 @@ class User extends React.Component {
                         <h1>Upcoming Reservations</h1>
                         {this.upcomingRes()}
                     </div>
+                </div>
+
+                <div>
+                    <h1>Favorite Restaurants</h1>
+                    {this.allFavorites()}
                 </div>
 
             </div>

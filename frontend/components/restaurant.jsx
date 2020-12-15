@@ -3,19 +3,52 @@ import { withRouter } from 'react-router-dom';
 import ReservatonContainer from './reservation_container';
 import ReviewIndex from './review_index';
 
-
 class Restaurant extends React.Component {
     constructor(props) {
         super(props);
 
+        this.createFav = this.createFav.bind(this);
+        this.deleteFav = this.deleteFav.bind(this);
+        this.checkFav = this.checkFav.bind(this);
+
     }
 
     componentDidMount() {
-      this.props.fetchRestaurant(this.props.match.params.restId);
+      debugger;
+      if (this.props.restaurant === undefined) {
+        this.props.fetchRestaurant(this.props.match.params.restId);
+      }
+    }
+
+    createFav(id) {
+      return e => {
+        e.preventDefault();
+        this.props.createFav(id);
+      }
+    }
+
+    deleteFav(id) {
+      return e => {
+        e.preventDefault();
+        this.props.deleteFav(id)
+      }
+    }
+
+    checkFav() {
+      const { restaurant } = this.props;
+      if (restaurant.favorited) {
+        return (
+          <div className="unsave-res" onClick={this.deleteFav(restaurant.id)}>Unfavorite this restaurant</div>
+        )
+      } else {
+        return (
+          <div className="save-res" onClick={this.createFav(restaurant.id)}>Favorite this restaurant</div>
+        )
+      }
     }
 
     render() {
-        if (this.props.restaurant.id === undefined) {
+        if (this.props.restaurant === undefined) {
             return(
                 <div>There is no information</div>
             );
@@ -25,9 +58,9 @@ class Restaurant extends React.Component {
         const numReviews = Object.values(this.props.reviews).length
         
 
-        debugger;
         return (
           <>
+          {this.checkFav()}
             <div className="rest-banner"><i>BANNER GOES HERE</i></div>
             <div className="rest-show">
               <div className="rest-main">

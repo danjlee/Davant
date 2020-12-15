@@ -23,12 +23,4 @@ class Api::RestaurantsController < ApplicationController
         render "api/restaurants/show"
     end
 
-    # def search
-    #     if params[:keyword]
-    #         @restaurants = Restaurant.find_restaurant(params[:keyword])
-    #         render "api/restaurants/index"
-    #     else
-    #         render json: ["No results found"]
-    #     end
-    # end
 end

@@ -9,7 +9,7 @@ const receiveFavs = favorites => ({
     favorites
 });
 
-const receiveFav = favorite = ({
+const receiveFav = favorite => ({
     type: RECEIVE_FAV,
     favorite
 });
@@ -24,14 +24,14 @@ export const createFav = restId => dispatch => (
 );
 
 export const fetchFav = id => dispatch => (
-    FavoriteApi.fetchFav(id).then( fav => dispatch(receiveFav(fav)))
+    FavoriteAPI.fetchFav(id).then( fav => dispatch(receiveFav(fav)))
 );
 
 export const fetchFavs = userId => dispatch => (
-    FavoriteApi.fetchFavs(userId).then( favs => dispatch(receiveFavs(favs)))
+    FavoriteAPI.fetchFavs(userId).then( favs => dispatch(receiveFavs(favs)))
 );
 
 export const deleteFav = restId => dispatch => (
-    FavoriteApi.deleteFav(restId).then( fav => dispatch(removeFav(fav)))
+    FavoriteAPI.deleteFav(restId).then( fav => dispatch(removeFav(fav)))
 );
 
