@@ -36,6 +36,7 @@ class Restaurant extends React.Component {
 
     checkFav() {
       const { restaurant } = this.props;
+      debugger;
       if (restaurant.favorited) {
         return (
           <div className="unsave-res" onClick={this.deleteFav(restaurant.id)}>Unfavorite this restaurant</div>
