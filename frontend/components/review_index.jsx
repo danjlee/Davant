@@ -15,6 +15,9 @@ class ReviewIndex extends React.Component {
         let food = 0;
         let service = 0;
         let ambience = 0;
+        
+        console.log('this was hit')
+        console.log(this.props.reviews)
 
         const allReviews = Object.values(this.props.reviews).map(review => {
             overall += review.overall;

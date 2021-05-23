@@ -8,7 +8,7 @@ import Restaurant from './restaurant';
 const mapStateToProps = (state, ownProps) => {
     const restId = ownProps.match.params.restId
     const restaurant = state.entities.restaurants[restId]
-    debugger;
+    
     return ({
         restaurant,
         users: state.entities.users,

@@ -5,7 +5,7 @@ import ReviewIndex from './review_index';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        reviews: state.entities.reviews,
+        // reviews: state.entities.reviews,
         restId: ownProps.match.params.restId,
         restaurant: state.entities.restaurants[ownProps.match.params.restId],
         currentUserId: state.session.id

@@ -14,7 +14,7 @@ class Restaurant extends React.Component {
     }
 
     componentDidMount() {
-      debugger;
+      
       if (this.props.restaurant === undefined) {
         this.props.fetchRestaurant(this.props.match.params.restId);
       }
@@ -56,8 +56,9 @@ class Restaurant extends React.Component {
         }
 
         const { name, address, location, phone_number, cuisine, menu, hours, dress_code, exec_chef, description } = this.props.restaurant;
-        const numReviews = Object.values(this.props.reviews).length
+        const numReviews = Object.values(this.props.restaurant.reviews).length
         
+        debugger;
 
         return (
           <>
@@ -74,7 +75,7 @@ class Restaurant extends React.Component {
                 <div className="revs-container">
                   
                   {numReviews ?
-                  <ReviewIndex reviews={this.props.reviews} users={this.props.users} reservations={this.props.reservations} /> :
+                  <ReviewIndex reviews={this.props.restaurant.reviews} users={this.props.users} reservations={this.props.reservations} /> :
                   <span className="no-reviews"> No reviews yet!</span>
                 }
                 

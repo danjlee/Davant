@@ -66,12 +66,13 @@ class User extends React.Component {
                         <h1>Upcoming Reservations</h1>
                         {this.upcomingRes()}
                     </div>
+                    
+                    <div>
+                        <h1>Favorite Restaurants</h1>
+                        {this.allFavorites()}
+                    </div>
                 </div>
 
-                <div>
-                    <h1>Favorite Restaurants</h1>
-                    {this.allFavorites()}
-                </div>
 
             </div>
         )
