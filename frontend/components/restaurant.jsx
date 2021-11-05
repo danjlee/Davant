@@ -72,6 +72,7 @@ class Restaurant extends React.Component {
                   <a href={menu}>View menu</a>
                 </span>
 
+
                 <div className="revs-container">
                   
                   {numReviews ?
